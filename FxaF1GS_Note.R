@@ -262,26 +262,26 @@ for (trait in traits) {
       soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BayesB", Hyperparameters = hp.BB, Function = "tuning")
       MSE = soln$MSE
       hp.USE = as.matrix(MSE[MSE$MSE == min(MSE$MSE), 2:4, drop = FALSE])
-      soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BayesB", Hyperparameters = hp.BB, Function = "fitting")
+      soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BayesB", Hyperparameters = hp.USE, Function = "fitting")
       yhat = X %*% soln$Beta
       res$resBB[i] = cor(yhat[pred], dat$pheno[pred])
       soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BayesB", Hyperparameters = hp.BB, Function = "tuning")
       MSE = soln$MSE
       hp.USE = as.matrix(MSE[MSE$MSE == min(MSE$MSE), 2:4, drop = FALSE])
-      soln = VIGoR::vigor(Pheno = dati$pheno, Geno = XH, Method = "BayesB", Hyperparameters = hp.BB, Function = "fitting")
+      soln = VIGoR::vigor(Pheno = dati$pheno, Geno = XH, Method = "BayesB", Hyperparameters = hp.USE, Function = "fitting")
       yhat = XH %*% soln$Beta
       res$resBBd[i] = cor(yhat[pred], dat$pheno[pred])
       
       soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BL", Hyperparameters = hp.BL, Function = "tuning")
       MSE = soln$MSE
       hp.USE = as.matrix(MSE[MSE$MSE == min(MSE$MSE), 2:3, drop = FALSE])
-      soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BL", Hyperparameters = hp.BL, Function = "fitting")
+      soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BL", Hyperparameters = hp.USE, Function = "fitting")
       yhat = X %*% soln$Beta
       res$resBL[i] = cor(yhat[pred], dat$pheno[pred])
       soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BL", Hyperparameters = hp.BL, Function = "tuning")
       MSE = soln$MSE
       hp.USE = as.matrix(MSE[MSE$MSE == min(MSE$MSE), 2:3, drop = FALSE])
-      soln = VIGoR::vigor(Pheno = dati$pheno, Geno = XH, Method = "BL", Hyperparameters = hp.BL, Function = "fitting")
+      soln = VIGoR::vigor(Pheno = dati$pheno, Geno = XH, Method = "BL", Hyperparameters = hp.USE, Function = "fitting")
       yhat = XH %*% soln$Beta
       res$resBLd[i] = cor(yhat[pred], dat$pheno[pred])
       
@@ -393,26 +393,26 @@ for (trait in traits) {
       soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BayesB", Hyperparameters = hp.BB, Function = "tuning")
       MSE = soln$MSE
       hp.USE = as.matrix(MSE[MSE$MSE == min(MSE$MSE), 2:4, drop = FALSE])
-      soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BayesB", Hyperparameters = hp.BB, Function = "fitting")
+      soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BayesB", Hyperparameters = hp.USE, Function = "fitting")
       yhat = X %*% soln$Beta
       res$resBB[i] = cor(yhat[pred], dat$pheno[pred])
       soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BayesB", Hyperparameters = hp.BB, Function = "tuning")
       MSE = soln$MSE
       hp.USE = as.matrix(MSE[MSE$MSE == min(MSE$MSE), 2:4, drop = FALSE])
-      soln = VIGoR::vigor(Pheno = dati$pheno, Geno = XH, Method = "BayesB", Hyperparameters = hp.BB, Function = "fitting")
+      soln = VIGoR::vigor(Pheno = dati$pheno, Geno = XH, Method = "BayesB", Hyperparameters = hp.USE, Function = "fitting")
       yhat = XH %*% soln$Beta
       res$resBBd[i] = cor(yhat[pred], dat$pheno[pred])
       
       soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BL", Hyperparameters = hp.BL, Function = "tuning")
       MSE = soln$MSE
       hp.USE = as.matrix(MSE[MSE$MSE == min(MSE$MSE), 2:3, drop = FALSE])
-      soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BL", Hyperparameters = hp.BL, Function = "fitting")
+      soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BL", Hyperparameters = hp.USE, Function = "fitting")
       yhat = X %*% soln$Beta
       res$resBL[i] = cor(yhat[pred], dat$pheno[pred])
       soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BL", Hyperparameters = hp.BL, Function = "tuning")
       MSE = soln$MSE
       hp.USE = as.matrix(MSE[MSE$MSE == min(MSE$MSE), 2:3, drop = FALSE])
-      soln = VIGoR::vigor(Pheno = dati$pheno, Geno = XH, Method = "BL", Hyperparameters = hp.BL, Function = "fitting")
+      soln = VIGoR::vigor(Pheno = dati$pheno, Geno = XH, Method = "BL", Hyperparameters = hp.USE, Function = "fitting")
       yhat = XH %*% soln$Beta
       res$resBLd[i] = cor(yhat[pred], dat$pheno[pred])
       
@@ -512,26 +512,26 @@ for (p in 1:5) {
     soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BayesB", Hyperparameters = hp.BB, Function = "tuning")
     MSE = soln$MSE
     hp.USE = as.matrix(MSE[MSE$MSE == min(MSE$MSE), 2:4, drop = FALSE])
-    soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BayesB", Hyperparameters = hp.BB, Function = "fitting")
+    soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BayesB", Hyperparameters = hp.USE, Function = "fitting")
     yhat = X %*% soln$Beta
     res$resBB[i] = cor(yhat[pred], dat$pheno[pred], use = "pairwise.complete.obs")
     soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BayesB", Hyperparameters = hp.BB, Function = "tuning")
     MSE = soln$MSE
     hp.USE = as.matrix(MSE[MSE$MSE == min(MSE$MSE), 2:4, drop = FALSE])
-    soln = VIGoR::vigor(Pheno = dati$pheno, Geno = XH, Method = "BayesB", Hyperparameters = hp.BB, Function = "fitting")
+    soln = VIGoR::vigor(Pheno = dati$pheno, Geno = XH, Method = "BayesB", Hyperparameters = hp.USE, Function = "fitting")
     yhat = XH %*% soln$Beta
     res$resBBd[i] = cor(yhat[pred], dat$pheno[pred], use = "pairwise.complete.obs")
     
     soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BL", Hyperparameters = hp.BL, Function = "tuning")
     MSE = soln$MSE
     hp.USE = as.matrix(MSE[MSE$MSE == min(MSE$MSE), 2:3, drop = FALSE])
-    soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BL", Hyperparameters = hp.BL, Function = "fitting")
+    soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BL", Hyperparameters = hp.USE, Function = "fitting")
     yhat = X %*% soln$Beta
     res$resBL[i] = cor(yhat[pred], dat$pheno[pred], use = "pairwise.complete.obs")
     soln = VIGoR::vigor(Pheno = dati$pheno, Geno = X, Method = "BL", Hyperparameters = hp.BL, Function = "tuning")
     MSE = soln$MSE
     hp.USE = as.matrix(MSE[MSE$MSE == min(MSE$MSE), 2:3, drop = FALSE])
-    soln = VIGoR::vigor(Pheno = dati$pheno, Geno = XH, Method = "BL", Hyperparameters = hp.BL, Function = "fitting")
+    soln = VIGoR::vigor(Pheno = dati$pheno, Geno = XH, Method = "BL", Hyperparameters = hp.USE, Function = "fitting")
     yhat = XH %*% soln$Beta
     res$resBLd[i] = cor(yhat[pred], dat$pheno[pred], use = "pairwise.complete.obs")
     
