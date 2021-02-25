@@ -1,6 +1,7 @@
 # 22-Dec-2020
 # This R script was written for 
 # "Genomic selection for F1 hybrid breeding in strawberry (Fragaria x ananassa)."
+# https://doi.org/10.3389/fpls.2021.645111
 # correspondence: yame.repos@gmail.com
 
 ################################################
