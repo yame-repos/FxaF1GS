@@ -44,7 +44,7 @@ myDmat = function(X, n.core = 1) {
   Mpq = tcrossprod(v1, matrix(p * q, m, 1))
   H = H - 2 * Mpq
   D = tcrossprod(H)
-  var.D = 4 * mean(pq) * (1 - 2 * mean(pq))
+  var.D = 2 * mean(pq) * (1 - 2 * mean(pq))
   W = H - 2 * Mpq
   D = tcrossprod(W) / var.D / m
   return(D)
