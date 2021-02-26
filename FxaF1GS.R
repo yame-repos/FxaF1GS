@@ -1,3 +1,10 @@
+# 26-Feb-2021
+# This R script was written for 
+# "Genomic selection for F1 hybrid breeding in strawberry (Fragaria x ananassa)."
+# https://doi.org/10.3389/fpls.2021.645111
+# This is a source file for functions used in FxaF1GS_Note.R.
+# correspondence: yame.repos@gmail.com
+
 makeZ = function(row.id, col.id) {
   Z = matrix(0, nrow=length(row.id), ncol=length(col.id))
   rownames(Z) = row.id
